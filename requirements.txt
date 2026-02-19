@@ -1,0 +1,7 @@
+qiskit==0.19.6
+qiskit-aqua==0.7.5
+gmpy2
+numpy
+scipy<1.14.0
+matplotlib
+jupyter
