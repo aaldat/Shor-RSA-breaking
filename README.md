@@ -24,10 +24,9 @@ The project workflow is divided into two main phases:
 
 The current configuration of this project (parameters, library patches, and RSA key sizes) has been specifically tuned to allow the **quantum circuit to be simulated on a standard local machine**. 
 
-### Local Constraints vs. Theoretical Scalability:
-* **Modular Exponentiation:** In Shor's algorithm, this is the most computationally expensive part. For a local simulation, we use a small $N$ (e.g., 51 or 15) to keep the number of qubits and the simulation time within reasonable limits.
-* **Qiskit Aqua Patches:** The specific library versions and manual fixes were implemented to maintain a stable environment on Python 3.9, ensuring the `qasm_simulator` remains performant.
-* **Scalability:** The logic implemented in `main.py` and `RSA.py` is theoretically **identical** to what would be used for larger integers. To scale this project:
+* In Shor's algorithm, for a local simulation, we use a small $N$ (e.g., 51 or 15) to keep the number of qubits and the simulation time within reasonable limits.
+* **Qiskit Aqua Patches:** the specific library versions and manual fixes were implemented to maintain a stable environment on Python 3.9, ensuring the `qasm_simulator` remains performant.
+* **Scalability:** the logic implemented in `main.py` and `RSA.py` is theoretically **identical** to what would be used for larger integers. To scale this project:
     1. Increase the prime generation bit-size in `RSA.py`.
     2. Connect to a real Quantum Device (via the IBM Quantum API) instead of the local Aer simulator.
     3. Be aware that factoring a standard 2048-bit RSA key would require millions of physical qubits, far exceeding current hardware capabilities, but the **software architecture of this project remains valid**.
