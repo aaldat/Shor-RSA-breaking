@@ -9,9 +9,6 @@ The project workflow is divided into two main phases:
 1. **The Classical Phase (RSA Setup):** a custom implementation of the RSA algorithm (`RSA.py`). It generates prime numbers, creates public ($e, N$) and private ($d, N$) keys, and successfully encrypts and decrypts a user-provided plaintext message.
 2. **The Quantum Phase (Shor's Attack):** the main script extracts the public modulus $N$ and passes it to a simulated quantum circuit using Qiskit. Shor's algorithm runs phase estimation and modular exponentiation to find the prime factors ($p$ and $q$) of $N$, effectively breaking the encryption without knowing the private key.
 
-
-## Repository Structure
-
 * `test.py`: The core executable script that runs the RSA simulation followed by the quantum attack (formerly `test.py`).
 * `RSA.py`: Custom classical library for RSA key generation, encryption, and decryption.
 * `Shor.ipynb`: A Jupyter Notebook for isolated testing and visualization of the quantum circuit.
