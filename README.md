@@ -1,4 +1,4 @@
-# Breaking RSA with Quantum Computing: Shor's Algorithm
+# Breaking RSA using Shor's algorithm
 
 This repository contains a hybrid classical-quantum project demonstrating how **RSA public-key cryptography** can be compromised using **Shor's Algorithm** simulated on a quantum computer. 
 
@@ -44,5 +44,5 @@ Furthermore, newer versions of `scipy` have removed certain utilities (`sputils`
 ---
 
 ## Installation
-
+```python
 pip install -r requirements.txt
